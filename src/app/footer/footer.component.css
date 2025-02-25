@@ -1,0 +1,62 @@
+/* Estilos del footer */
+footer {
+  background-color: #85ff89;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+/* Estilo para el texto de derechos reservados */
+footer p {
+  left:20px;
+  color: black;
+}
+
+/* Estilo para la sección de redes sociales */
+.social-media {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Ajusta el margen derecho */
+  transform: translateY(-50%); /* Centra los íconos verticalmente */
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilos para cada ícono social */
+.social-icon {
+  font-size: 30px; /* Tamaño de los íconos */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Colores correspondientes a cada red social */
+.facebook {
+  color: #3b5998; /* Azul de Facebook */
+}
+
+.instagram {
+  color: #e4405f; /* Rosa de Instagram */
+}
+
+.whatsapp {
+  color: #25d366; /* Verde de WhatsApp */
+}
+
+.x {
+  color: #1da1f2; /* Azul de X (Twitter) */
+}
+
+/* Efecto hover: cambiar color cuando se pasa el ratón */
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+/* Para móviles: hacer los íconos más pequeños en pantallas pequeñas */
+@media (max-width: 600px) {
+  .social-icon {
+    font-size: 25px; /* Reducción del tamaño de los íconos en pantallas pequeñas */
+  }
+}
+
+
+  

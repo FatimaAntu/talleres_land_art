@@ -1,0 +1,92 @@
+<!--<form [formGroup]="inscripcionForm" (ngSubmit)="onSubmit()">
+  <label for="nombreNino">Nombre del niño/a:</label>
+  <input id="nombreNino" formControlName="nombreNino" type="text" required>
+  <div *ngIf="f['nombreNino'].invalid && f['nombreNino'].touched">Nombre es obligatorio (mínimo 3 caracteres).</div>
+
+  <label for="edad">Edad:</label>
+  <input id="edad" formControlName="edad" type="number" required>
+  <div *ngIf="f['edad'].invalid && f['edad'].touched">Edad entre 3 y 14 años.</div>
+
+  <label for="nombrePadre">Nombre Padre/Madre o Tutor:</label>
+  <input id="nombrePadre" formControlName="nombrePadre" type="text" required>
+  <div *ngIf="f['nombrePadre'].invalid && f['nombrePadre'].touched">Nombre es obligatorio.</div>
+
+  <label for="taller">Taller:</label>
+  <select id="taller" formControlName="taller" required>
+    <option value="">Seleccione un taller</option>
+    <option value="arteEfimero">Arte Efímero en el Bosque</option>
+    <option value="muralesMandala">Murales/Mandalas en la Naturaleza</option>
+    <option value="reciclajeArtistico">Taller de Reciclaje Artístico</option>
+  </select>
+  <div *ngIf="f['taller'].invalid && f['taller'].touched">Seleccione un taller.</div>
+
+  <label for="telefono">Teléfono de contacto:</label>
+  <input id="telefono" formControlName="telefono" type="tel" required>
+  <div *ngIf="f['telefono'].invalid && f['telefono'].touched">Ingrese un teléfono válido (9 dígitos).</div>
+
+  <div class="form-buttons">
+    <button type="submit" [disabled]="inscripcionForm.invalid">Enviar</button>
+    <button type="button" (click)="inscripcionForm.reset()">Cancelar</button>
+  </div>
+</form>
+
+<!-- Modal 
+<div *ngIf="modalVisible" class="modal">
+  <div class="modal-content">
+    <p>{{ mensajeConfirmacion }}</p>
+    <button (click)="confirmarInscripcion()" class="confirmar">Confirmar</button>
+    <button (click)="cancelarModal()" class="cancelar">Cancelar</button>
+    
+  </div>
+</div>-->
+<div class="container">
+  <form [formGroup]="inscripcionForm" (ngSubmit)="onSubmit()">
+    <label for="nombreNino">Nombre del niño/a:</label>
+    <input id="nombreNino" formControlName="nombreNino" type="text" required>
+    <div *ngIf="f['nombreNino'].invalid && f['nombreNino'].touched">Nombre es obligatorio (mínimo 3 caracteres).</div>
+
+    <label for="edad">Edad:</label>
+    <input id="edad" formControlName="edad" type="number" required>
+    <div *ngIf="f['edad'].invalid && f['edad'].touched">Edad entre 3 y 14 años.</div>
+
+    <label for="nombrePadre">Nombre Padre/Madre o Tutor:</label>
+    <input id="nombrePadre" formControlName="nombrePadre" type="text" required>
+    <div *ngIf="f['nombrePadre'].invalid && f['nombrePadre'].touched">Nombre es obligatorio.</div>
+
+    <label for="taller">Taller:</label>
+    <select id="taller" formControlName="taller" required>
+      <option value="">Seleccione un taller</option>
+      <option value="arteEfimero">Arte Efímero en el Bosque</option>
+      <option value="muralesMandala">Murales/Mandalas en la Naturaleza</option>
+      <option value="reciclajeArtistico">Taller de Reciclaje Artístico</option>
+    </select>
+    <div *ngIf="f['taller'].invalid && f['taller'].touched">Seleccione un taller.</div>
+
+    <label for="telefono">Teléfono de contacto:</label>
+    <input id="telefono" formControlName="telefono" type="tel" required>
+    <div *ngIf="f['telefono'].invalid && f['telefono'].touched">Ingrese un teléfono válido (9 dígitos).</div>
+
+    <div class="form-buttons">
+      <button type="submit" [disabled]="inscripcionForm.invalid">Enviar</button>
+      <button type="button" (click)="inscripcionForm.reset()">Cancelar</button>
+    </div>
+  </form>
+
+  <div class="beneficios">
+    <h2>Beneficios de Nuestros Talleres</h2>
+    <p>-Desarrollar su creatividad y pensamiento crítico.</p>
+    <p>- Conectar con la naturaleza y desarrollar un mayor respeto y amor por el medio ambiente. </p>
+    <p>-Aprender a trabajar juntos y colaborar en proyectos creativos.</p>
+    <p>-Desarrollar habilidades motoras finas al recolectar y manipular materiales naturales.</p>
+    <img src="land-art1.jpg" alt="Talleres de arte" class="imagen-beneficios">
+  </div>
+
+  <!-- Modal -->
+  <div *ngIf="modalVisible" class="modal">
+    <div class="modal-content">
+      <p>{{ mensajeConfirmacion }}</p>
+      <button (click)="confirmarInscripcion()" class="confirmar">Confirmar</button>
+      <button (click)="cancelarModal()" class="cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>

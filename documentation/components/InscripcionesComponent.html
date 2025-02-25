@@ -1,0 +1,961 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>talleres-land-art documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">talleres-land-art documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  InscripcionesComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/inscripciones/inscripciones.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que gestiona el formulario de inscripción a los talleres.
+Permite a los usuarios inscribir a un niño en un taller, validando los datos introducidos.</p>
+
+    </p>
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-inscripciones</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                            <code>ReactiveFormsModule</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./inscripciones.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./inscripciones.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inscripcionForm" >inscripcionForm</a>
+                            </li>
+                            <li>
+                                <a href="#mensajeConfirmacion" >mensajeConfirmacion</a>
+                            </li>
+                            <li>
+                                <a href="#modalVisible" >modalVisible</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancelarModal" >cancelarModal</a>
+                            </li>
+                            <li>
+                                <a href="#confirmarInscripcion" >confirmarInscripcion</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#f" >f</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: FormBuilder)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor del componente.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Servicio FormBuilder para construir el formulario reactivo.</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelarModal"></a>
+                    <span class="name">
+                        <span ><b>cancelarModal</b></span>
+                        <a href="#cancelarModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelarModal()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="73"
+                                    class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Cancela el modal de confirmación sin realizar la inscripción.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmarInscripcion"></a>
+                    <span class="name">
+                        <span ><b>confirmarInscripcion</b></span>
+                        <a href="#confirmarInscripcion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmarInscripcion()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="64"
+                                    class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Confirma la inscripción, muestra una alerta y resetea el formulario.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="54"
+                                    class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método ejecutado al enviar el formulario.
+Si es válido, muestra el modal de confirmación con el nombre del niño.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inscripcionForm"></a>
+                    <span class="name">
+                        <span ><b>inscripcionForm</b></span>
+                        <a href="#inscripcionForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Formulario reactivo para gestionar la inscripción.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mensajeConfirmacion"></a>
+                    <span class="name">
+                        <span ><b>mensajeConfirmacion</b></span>
+                        <a href="#mensajeConfirmacion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Mensaje que se muestra en el modal de confirmación.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalVisible"></a>
+                    <span class="name">
+                        <span ><b>modalVisible</b></span>
+                        <a href="#modalVisible"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Controla la visibilidad del modal de confirmación.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="f"></a>
+                        <span class="name"><b>f</b><a href="#f"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>f()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/inscripciones/inscripciones.component.ts:46</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Obtiene los controles del formulario para facilitar el acceso en la plantilla.</p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+/**
+ * Componente que gestiona el formulario de inscripción a los talleres.
+ * Permite a los usuarios inscribir a un niño en un taller, validando los datos introducidos.
+ */
+@Component({
+  selector: &#x27;app-inscripciones&#x27;,
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: &#x27;./inscripciones.component.html&#x27;,
+  styleUrls: [&#x27;./inscripciones.component.css&#x27;]
+})
+export class InscripcionesComponent {
+    /**
+   * Formulario reactivo para gestionar la inscripción.
+   */
+  inscripcionForm: FormGroup;
+   /**
+   * Controla la visibilidad del modal de confirmación.
+   */
+  modalVisible &#x3D; false;
+    /**
+   * Mensaje que se muestra en el modal de confirmación.
+   */
+  mensajeConfirmacion &#x3D; &#x27;&#x27;;
+   /**
+   * Constructor del componente.
+   * 
+   * @param fb Servicio FormBuilder para construir el formulario reactivo.
+   */
+  constructor(private fb: FormBuilder) {
+    this.inscripcionForm &#x3D; this.fb.group({
+      nombreNino: [&#x27;&#x27;, [Validators.required, Validators.minLength(3)]],
+      edad: [&#x27;&#x27;, [Validators.required, Validators.min(3), Validators.max(18)]],
+      nombrePadre: [&#x27;&#x27;, [Validators.required, Validators.minLength(3)]],
+      taller: [&#x27;&#x27;, Validators.required],
+      telefono: [&#x27;&#x27;, [Validators.required, Validators.pattern(/^\d{9}$/)]]
+    });
+  }
+   /**
+   * Obtiene los controles del formulario para facilitar el acceso en la plantilla.
+   */
+
+  get f() {
+    return this.inscripcionForm.controls;
+  }
+
+  /**
+   * Método ejecutado al enviar el formulario.
+   * Si es válido, muestra el modal de confirmación con el nombre del niño.
+   */
+  onSubmit() {
+    if (this.inscripcionForm.valid) {
+      this.mensajeConfirmacion &#x3D; &#x60;Confirmar inscripción para ${this.f[&#x27;nombreNino&#x27;].value}?&#x60;;
+      this.modalVisible &#x3D; true;
+    }
+  }
+   /**
+   * Confirma la inscripción, muestra una alerta y resetea el formulario.
+   */
+
+  confirmarInscripcion() {
+    alert(&#x27;¡Inscripción confirmada!&#x27;);
+    this.modalVisible &#x3D; false;
+    this.inscripcionForm.reset();
+  }
+  /**
+   * Cancela el modal de confirmación sin realizar la inscripción.
+   */
+
+  cancelarModal() {
+    this.modalVisible &#x3D; false;
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form [formGroup]&#x3D;&quot;inscripcionForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot;&gt;
+  &lt;label for&#x3D;&quot;nombreNino&quot;&gt;Nombre del niño/a:&lt;/label&gt;
+  &lt;input id&#x3D;&quot;nombreNino&quot; formControlName&#x3D;&quot;nombreNino&quot; type&#x3D;&quot;text&quot; required&gt;
+  &lt;div *ngIf&#x3D;&quot;f[&#x27;nombreNino&#x27;].invalid &amp;&amp; f[&#x27;nombreNino&#x27;].touched&quot;&gt;Nombre es obligatorio (mínimo 3 caracteres).&lt;/div&gt;
+
+  &lt;label for&#x3D;&quot;edad&quot;&gt;Edad:&lt;/label&gt;
+  &lt;input id&#x3D;&quot;edad&quot; formControlName&#x3D;&quot;edad&quot; type&#x3D;&quot;number&quot; required&gt;
+  &lt;div *ngIf&#x3D;&quot;f[&#x27;edad&#x27;].invalid &amp;&amp; f[&#x27;edad&#x27;].touched&quot;&gt;Edad entre 3 y 18 años.&lt;/div&gt;
+
+  &lt;label for&#x3D;&quot;nombrePadre&quot;&gt;Nombre Padre/Madre o Tutor:&lt;/label&gt;
+  &lt;input id&#x3D;&quot;nombrePadre&quot; formControlName&#x3D;&quot;nombrePadre&quot; type&#x3D;&quot;text&quot; required&gt;
+  &lt;div *ngIf&#x3D;&quot;f[&#x27;nombrePadre&#x27;].invalid &amp;&amp; f[&#x27;nombrePadre&#x27;].touched&quot;&gt;Nombre es obligatorio.&lt;/div&gt;
+
+  &lt;label for&#x3D;&quot;taller&quot;&gt;Taller:&lt;/label&gt;
+  &lt;select id&#x3D;&quot;taller&quot; formControlName&#x3D;&quot;taller&quot; required&gt;
+    &lt;option value&#x3D;&quot;&quot;&gt;Seleccione un taller&lt;/option&gt;
+    &lt;option value&#x3D;&quot;arteEfimero&quot;&gt;Arte Efímero en el Bosque&lt;/option&gt;
+    &lt;option value&#x3D;&quot;muralesMandala&quot;&gt;Murales/Mandalas en la Naturaleza&lt;/option&gt;
+    &lt;option value&#x3D;&quot;reciclajeArtistico&quot;&gt;Taller de Reciclaje Artístico&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;div *ngIf&#x3D;&quot;f[&#x27;taller&#x27;].invalid &amp;&amp; f[&#x27;taller&#x27;].touched&quot;&gt;Seleccione un taller.&lt;/div&gt;
+
+  &lt;label for&#x3D;&quot;telefono&quot;&gt;Teléfono de contacto:&lt;/label&gt;
+  &lt;input id&#x3D;&quot;telefono&quot; formControlName&#x3D;&quot;telefono&quot; type&#x3D;&quot;tel&quot; required&gt;
+  &lt;div *ngIf&#x3D;&quot;f[&#x27;telefono&#x27;].invalid &amp;&amp; f[&#x27;telefono&#x27;].touched&quot;&gt;Ingrese un teléfono válido (9 dígitos).&lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;form-buttons&quot;&gt;
+    &lt;button type&#x3D;&quot;submit&quot; [disabled]&#x3D;&quot;inscripcionForm.invalid&quot;&gt;Enviar&lt;/button&gt;
+    &lt;button type&#x3D;&quot;button&quot; (click)&#x3D;&quot;inscripcionForm.reset()&quot;&gt;Cancelar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div *ngIf&#x3D;&quot;modalVisible&quot; class&#x3D;&quot;modal&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+    &lt;p&gt;{{ mensajeConfirmacion }}&lt;/p&gt;
+    &lt;button (click)&#x3D;&quot;confirmarInscripcion()&quot; class&#x3D;&quot;confirmar&quot;&gt;Confirmar&lt;/button&gt;
+    &lt;button (click)&#x3D;&quot;cancelarModal()&quot; class&#x3D;&quot;cancelar&quot;&gt;Cancelar&lt;/button&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./inscripciones.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+
+/* Botones con separación */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px; /* Espaciado entre botones */
+}
+
+button[type&#x3D;&quot;submit&quot;] {
+  background-color: #4CAF50; /* Verde */
+}
+
+button[type&#x3D;&quot;submit&quot;]:hover {
+  background-color: #45a049;
+}
+
+button[type&#x3D;&quot;button&quot;] {
+  background-color: #f44336; /* Rojo */
+}
+
+button[type&#x3D;&quot;button&quot;]:hover {
+  background-color: #d32f2f;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/*button {
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+/* Estilos de los campos de entrada y etiquetas */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  color: white; /* Color del texto */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px; /* Espaciado entre botones */
+}
+
+button:hover {
+  opacity: 0.9; /* Efecto al pasar el ratón */
+}
+
+button.confirmar {
+  background-color: #4CAF50; /* Verde para el botón de confirmar */
+}
+
+button.confirmar:hover {
+  background-color: #2b842f; /* Verde más oscuro al pasar el ratón */
+}
+
+button.cancelar {
+  background-color: #f44336; /* Rojo para el botón de cancelar */
+}
+
+button.cancelar:hover {
+  background-color: #bf1c1c; /* Rojo más oscuro al pasar el ratón */
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form [formGroup]="inscripcionForm" (ngSubmit)="onSubmit()">  <label for="nombreNino">Nombre del niño/a:</label>  <input id="nombreNino" formControlName="nombreNino" type="text" required>  <div *ngIf="f[\'nombreNino\'].invalid && f[\'nombreNino\'].touched">Nombre es obligatorio (mínimo 3 caracteres).</div>  <label for="edad">Edad:</label>  <input id="edad" formControlName="edad" type="number" required>  <div *ngIf="f[\'edad\'].invalid && f[\'edad\'].touched">Edad entre 3 y 18 años.</div>  <label for="nombrePadre">Nombre Padre/Madre o Tutor:</label>  <input id="nombrePadre" formControlName="nombrePadre" type="text" required>  <div *ngIf="f[\'nombrePadre\'].invalid && f[\'nombrePadre\'].touched">Nombre es obligatorio.</div>  <label for="taller">Taller:</label>  <select id="taller" formControlName="taller" required>    <option value="">Seleccione un taller</option>    <option value="arteEfimero">Arte Efímero en el Bosque</option>    <option value="muralesMandala">Murales/Mandalas en la Naturaleza</option>    <option value="reciclajeArtistico">Taller de Reciclaje Artístico</option>  </select>  <div *ngIf="f[\'taller\'].invalid && f[\'taller\'].touched">Seleccione un taller.</div>  <label for="telefono">Teléfono de contacto:</label>  <input id="telefono" formControlName="telefono" type="tel" required>  <div *ngIf="f[\'telefono\'].invalid && f[\'telefono\'].touched">Ingrese un teléfono válido (9 dígitos).</div>  <div class="form-buttons">    <button type="submit" [disabled]="inscripcionForm.invalid">Enviar</button>    <button type="button" (click)="inscripcionForm.reset()">Cancelar</button>  </div></form><!-- Modal --><div *ngIf="modalVisible" class="modal">  <div class="modal-content">    <p>{{ mensajeConfirmacion }}</p>    <button (click)="confirmarInscripcion()" class="confirmar">Confirmar</button>    <button (click)="cancelarModal()" class="cancelar">Cancelar</button>      </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'InscripcionesComponent', 'selector': 'app-inscripciones'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'TalleresComponent', 'selector': 'app-talleres'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InscripcionesComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InscripcionesComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
