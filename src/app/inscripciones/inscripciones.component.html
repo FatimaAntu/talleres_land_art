@@ -39,6 +39,9 @@
     
   </div>
 </div>-->
+<div *ngIf="temperatura !== null" class="clima">
+  <p>🌤 La temperatura actual en Sevilla es de {{ temperatura }}°C</p>
+</div>
 <div class="container">
   <form [formGroup]="inscripcionForm" (ngSubmit)="onSubmit()">
     <label for="nombreNino">Nombre del niño/a:</label>

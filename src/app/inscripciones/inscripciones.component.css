@@ -13,11 +13,12 @@ form {
   display: flex;
   flex-direction: column;
   width: 400px; /* Ancho del formulario */
-  margin-left: 80px;
-  padding: 20px;
+  margin-left: 100px;
+  padding: 25px;
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+  gap: 20px;
 }
 
 .beneficios {
@@ -149,4 +150,20 @@ button.cancelar:hover {
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+.clima {
+  margin: 20px; /* Separación del borde de la página */
+  padding: 15px; /* Espacio interno */
+  background-color: #e0f7fa; /* Color de fondo suave */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  text-align: center; /* Centrar el texto */
+  font-family: 'Arial', sans-serif; /* Cambiar fuente */
+}
+
+.clima p {
+  font-size: 24px; /* Tamaño de letra más grande */
+  color: #00796b; /* Color de texto */
+  font-weight: bold; /* Negrita */
+  margin: 0; /* Eliminar margen */
 }
